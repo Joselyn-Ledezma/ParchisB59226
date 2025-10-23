@@ -4,6 +4,7 @@
  */
 package com.mycompany.parchisb59226.controlador;
 
+import com.mycompany.parchisb59226.modelo.AreaJuego;
 import com.mycompany.parchisb59226.modelo.Ficha;
 import com.mycompany.parchisb59226.modelo.Posicion;
 import com.mycompany.parchisb59226.vista.GUIJuego;
@@ -29,6 +30,7 @@ public class ControladorJuego implements ActionListener,MouseListener{
     private PanelControl panelControl;
     private GUIPrincipal guiPrincipal;
     private Ficha ficha;
+    private AreaJuego areaJuego;
     
     
     public ControladorJuego(GUIPrincipal guiPrincipal){
@@ -37,10 +39,12 @@ public class ControladorJuego implements ActionListener,MouseListener{
     panelJuego=guiJuego.getPanelJuego();
     panelControl=guiJuego.getPanelControl();
     guiJuego.setVisible(true);
+    areaJuego=new AreaJuego();
     ficha=new Ficha(new Posicion(100,100),new ImageIcon("./src/main/resources/imagenes/pieceyellow.png"),"Amarillo");
     }//453,468
     public void dibujar(Component c, Graphics g){
     ficha.dibujar(c, g);
+    areaJuego.dibujar(c, g);
     } 
             
             

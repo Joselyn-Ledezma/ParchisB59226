@@ -4,16 +4,20 @@
  */
 package com.mycompany.parchisb59226.modelo;
 
+import java.awt.Component;
+import java.awt.Graphics;
+
 /**
  *
  * @author Joselyn Ledezma V
  */
 public class Casa {
+
     private Ficha[] fichas;
     private String color;
 
     public Casa(String color) {
-        fichas=new Ficha[4];
+        fichas = new Ficha[4];
         this.color = color;
     }
 
@@ -24,11 +28,22 @@ public class Casa {
     public void setColor(String color) {
         this.color = color;
     }
-    
-    public void setFicha(int posicion, Ficha ficha){
-    fichas[posicion]=ficha;
+
+    public void setFicha(int posicion, Ficha ficha) {
+        fichas[posicion] = ficha;
     }
-    public Ficha getFicha(int posicion){
-    return fichas [posicion];
+
+    public Ficha getFicha(int posicion) {
+        return fichas[posicion];
+    }
+
+    public void dibujar(Component componente, Graphics g) {
+        if (fichas != null) {
+            for (int indice = 0; indice < fichas.length; indice++) {
+                if (fichas[indice] != null) {
+                    fichas[indice].dibujar(componente, g);
+                }
+            }
+        }
     }
 }
