@@ -7,6 +7,7 @@ package com.mycompany.parchisb59226.controlador;
 import com.mycompany.parchisb59226.vista.GUICreditos;
 import com.mycompany.parchisb59226.vista.GUIHistoria;
 import com.mycompany.parchisb59226.vista.GUIInstrucciones;
+import com.mycompany.parchisb59226.vista.GUIJugador;
 import com.mycompany.parchisb59226.vista.GUIPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,6 +22,7 @@ public class ControladorPrincipal implements ActionListener{
     private GUIHistoria guiHistoria;
     private GUIInstrucciones guiInstrucciones; 
     private ControladorJuego controladorJuego;
+    private GUIJugador guiJugador;
     
     public ControladorPrincipal(){
     guiPrincipal=new GUIPrincipal(this);
@@ -28,6 +30,7 @@ public class ControladorPrincipal implements ActionListener{
     guiCreditos=new GUICreditos(this);
     guiHistoria=new GUIHistoria(this);
     guiInstrucciones=new GUIInstrucciones(this);
+    guiJugador=new GUIJugador(this);
     
     
     
@@ -38,8 +41,11 @@ public class ControladorPrincipal implements ActionListener{
     {
         case "Jugar":
             guiPrincipal.setVisible(true);
-            controladorJuego=new ControladorJuego(guiPrincipal);
+            guiJugador.setVisible(true);
                 break;
+        case "Continuar":
+            controladorJuego=new ControladorJuego(guiPrincipal);
+            break;
          case "Instrucciones":
              guiPrincipal.setVisible(false);
              guiInstrucciones.setVisible(true);

@@ -23,7 +23,7 @@ public class Tablero {
         iniciar();
     }
     
-    
+    //CERO es IGUAL a 1
     public void iniciar(){
         int x=351;
         int y=589;
@@ -35,42 +35,44 @@ public class Tablero {
     }
     tablero[4]=new CeldaEspecialColor(new Posicion(x,y),"Salida Amarillo","Amarillo");
     tablero[4].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));
-    y-=30;
-     for(int indice=5;indice<8;indice++){
+//    y-=30;
+     for(int indice=5;indice<9;indice++){
     tablero[indice]= new Celda(new Posicion(x,y));
     tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
     y-=30;
     }
      x=383;
      y=349;
-        for(int indice=8;indice<11;indice++){
+        for(int indice=9;indice<12;indice++){
     tablero[indice]= new Celda(new Posicion(x,y));
     tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
     x+=30;
       }
-    tablero[11]=new CeldaEspecial(new Posicion(x,y),"Zona segura");
-    tablero[11].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));
+    tablero[13]=new CeldaEspecial(new Posicion(x,y),"Zona segura");
+    tablero[13].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));
    
-    for(int indice=12;indice<17;indice++){
+    for(int indice=13;indice<17;indice++){
     tablero[indice]= new Celda(new Posicion(x,y));
     tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
     x+=30;
     }
    x=561;
    y=308;
-    tablero[17]=new CeldaEspecial(new Posicion(x,y),"Zona segura");
-    tablero[17].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));
-    x=561;
-    y=243;
-        for(int indice=18;indice<21;indice++){
+    tablero[18]=new CeldaEspecial(new Posicion(x,y),"Zona segura");
+    tablero[18].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));
+    
+   x=558;
+   y=241;
+        for(int indice=19;indice<22;indice++){
     tablero[indice]= new Celda(new Posicion(x,y));
     tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
     x-=30;
     }
-    tablero[21]=new CeldaEspecialColor(new Posicion(x,y),"Salida Azul","Azul");
-    tablero[21].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));
-    x-=30;   
-    for(int indice=22;indice<25;indice++){
+    tablero[22]=new CeldaEspecialColor(new Posicion(x,y),"Salida Azul","Azul");
+    tablero[22].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black")); 
+    x-=30;
+    
+    for(int indice=23;indice<26;indice++){
     tablero[indice]= new Celda(new Posicion(x,y));
     tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
     x-=30;
@@ -90,65 +92,84 @@ public class Tablero {
     tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
     y-=30;
     }
-    
+//    curva 
    x=296;
-   y=3;
-    tablero[37]=new CeldaEspecial(new Posicion(x,y),"Zona segura");
-    tablero[37].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));  
-  x=241;
-  y=2;
-
-    for(int indice=38;indice<42;indice++){
+   y=0;
+    tablero[35]=new CeldaEspecial(new Posicion(x,y),"Zona segura");
+    tablero[35].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));  
+  x=242;
+  y=0;
+// recta
+    for(int indice=36;indice<40;indice++){
     tablero[indice]= new Celda(new Posicion(x,y));
     tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
     y+=30;
     }
-     tablero[42]=new CeldaEspecialColor(new Posicion(x,y),"Salida Azul","Azul");
-    tablero[42].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));
+     tablero[40]=new CeldaEspecialColor(new Posicion(x,y),"Salida Azul","Azul");
+    tablero[40].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));
     y+=30; 
-    for(int indice=43;indice<46;indice++){
+    for(int indice=41;indice<44;indice++){
     tablero[indice]= new Celda(new Posicion(x,y));
     tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
     y+=30;
     }
     x=211;
     y=243;
- for(int indice=47;indice<51;indice++){
+ for(int indice=44;indice<47;indice++){
     tablero[indice]= new Celda(new Posicion(x,y));
     tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
     x-=30;
     }
-  tablero[46]=new CeldaEspecialColor(new Posicion(x,y),"Salida Azul","Azul");
-    tablero[46].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));
+  tablero[47]=new CeldaEspecialColor(new Posicion(x,y),"Salida Azul","Azul");
+    tablero[47].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));
     x-=30; 
      
-    for(int indice=51;indice<55;indice++){
+    for(int indice=48;indice<52;indice++){
     tablero[indice]= new Celda(new Posicion(x,y));
     tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
     x-=30;
     }
    x=1;
    y=293;
-    tablero[55]=new CeldaEspecial(new Posicion(x,y),"Zona segura");
-    tablero[55].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));  
-
+    tablero[52]=new CeldaEspecial(new Posicion(x,y),"Zona segura");
+    tablero[52].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));  
+    
     x=1;
     y=349;
- for(int indice=56;indice<59;indice++){
+ for(int indice=53;indice<57;indice++){
     tablero[indice]= new Celda(new Posicion(x,y));
     tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
     x+=30;
     }
-    tablero[59]=new CeldaEspecialColor(new Posicion(x,y),"Salida Verde","Verde");
-    tablero[59].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));
+    tablero[57]=new CeldaEspecialColor(new Posicion(x,y),"Salida Verde","Verde");
+    tablero[57].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));
     x+=30; 
-    for(int indice=60;indice<64;indice++){
+    for(int indice=58;indice<61;indice++){
     tablero[indice]= new Celda(new Posicion(x,y));
     tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
     x+=30;
+    }//fin 
+    x=245;
+    y=382;
+     for(int indice=61;indice<64;indice++){
+    tablero[indice]= new Celda(new Posicion(x,y));
+    tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
+    y+=30;
     }
-   
+    tablero[64]=new CeldaEspecialColor(new Posicion(x,y),"Salida Amarillo","Amarillo");
+    tablero[64].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));
+    y+=30; 
+    for(int indice=65;indice<67;indice++){
+    tablero[indice]= new Celda(new Posicion(x,y));
+    tablero[indice].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack.png"),"Black"));
+    y+=30;
     }
+    x=294;
+    y=588;
+    tablero[67]=new CeldaEspecial(new Posicion(x,y),"Zona segura descanso");
+    tablero[67].setFicha(new Ficha(new Posicion(x,y),new ImageIcon("./src/main/resources/imagenes/pieceblack1.png"),"Black"));   
+    }
+
 
     public void crearCasa(String colorJugador1){
     if(colorJugador1.equals("Amarillo")){
