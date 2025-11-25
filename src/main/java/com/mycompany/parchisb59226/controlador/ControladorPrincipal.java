@@ -4,6 +4,7 @@
  */
 package com.mycompany.parchisb59226.controlador;
 
+
 import com.mycompany.parchisb59226.vista.GUICreditos;
 import com.mycompany.parchisb59226.vista.GUIHistoria;
 import com.mycompany.parchisb59226.vista.GUIInstrucciones;
@@ -14,72 +15,78 @@ import java.awt.event.ActionListener;
 
 /**
  *
- * @author Joselyn Ledezma V
+ * @author user
  */
-public class ControladorPrincipal implements ActionListener{
+public class ControladorPrincipal implements ActionListener  {
     private GUIPrincipal guiPrincipal;
     private GUICreditos guiCreditos;
+    private GUIInstrucciones guiInstrucciones;
     private GUIHistoria guiHistoria;
-    private GUIInstrucciones guiInstrucciones; 
     private ControladorJuego controladorJuego;
     private GUIJugador guiJugador;
+    private AudioController audio;
     
     public ControladorPrincipal(){
-    guiPrincipal=new GUIPrincipal(this);
-    guiPrincipal.setVisible(true);
-    guiCreditos=new GUICreditos(this);
-    guiHistoria=new GUIHistoria(this);
-    guiInstrucciones=new GUIInstrucciones(this);
-    guiJugador=new GUIJugador(this);
-    
-    
-    
+        guiPrincipal= new GUIPrincipal(this);
+        guiPrincipal.setVisible(true);
+        guiCreditos = new GUICreditos(this);
+        guiInstrucciones= new GUIInstrucciones(this);
+        guiHistoria= new GUIHistoria(this);
+        guiJugador=new GUIJugador(this);
+        audio= new AudioController();
     }
+
     @Override
-    public void actionPerformed(ActionEvent e){
-    switch(e.getActionCommand())
-    {
-        case "Jugar":
-            guiPrincipal.setVisible(true);
-            guiJugador.setVisible(true);
-                break;
-        case "Continuar":
-            controladorJuego=new ControladorJuego(guiPrincipal);
-            break;
-         case "Instrucciones":
-             guiPrincipal.setVisible(false);
-             guiInstrucciones.setVisible(true);
-                break;
-         case "AtrasInstrucciones":
-             guiInstrucciones.setVisible(false);
-             guiPrincipal.setVisible(true);
+    public void actionPerformed(ActionEvent e) {
+         switch (e.getActionCommand()){
+             case "Jugar":
+                 guiPrincipal.setVisible(false);
+                 guiJugador.setVisible(true);
              break;
-         case "Creditos":
-             guiPrincipal.setVisible(false);
-             guiCreditos.setVisible(true);
-                break;
-         case "atrasCreditos":
-             guiCreditos.setVisible(false);
-             guiPrincipal.setVisible(true);
+             case "Continuar":
+                 System.out.println(guiJugador.getCbColor());
+                 System.out.println(guiJugador.getTxtJugador1());
+                 System.out.println(guiJugador.getTxtJugador2());
+                 controladorJuego=new ControladorJuego(guiPrincipal,guiJugador.getCbColor(),guiJugador.getTxtJugador1(),guiJugador.getTxtJugador2());
              break;
-          case "Historia":
-             guiPrincipal.setVisible(false);
-             guiHistoria.setVisible(true);
-                break;
-         case "AtrasHistoria":
-             guiHistoria.setVisible(false);
-             guiPrincipal.setVisible(true);
+             case "Instrucciones":
+                 guiInstrucciones.setVisible(true);
+                 guiPrincipal.setVisible(false);
              break;
-         case "Salir":
-             System.exit(0);
-                break;
-                        
-                        
-                        
-                        
-    
-    
-    
+               case "AtrasInstrucciones":
+                  guiInstrucciones.setVisible(false);
+                  guiPrincipal.setVisible(true);
+             break;
+             case "Historia":
+                 guiHistoria.setVisible(true);
+                 guiPrincipal.setVisible(false);
+             break;
+             case "AtrasHistoria":
+                  guiHistoria.setVisible(false);
+                  guiPrincipal.setVisible(true);
+             break;
+             case "Creditos":
+                 guiCreditos.setVisible(true);
+                 guiPrincipal.setVisible(false);
+             break;
+             case "AtrasCreditos":
+                 guiPrincipal.setVisible(true);
+                  guiCreditos.setVisible(false);
+             break;
+             case "Salir":
+                 System.exit(0);
+             break;
+             case "Sonido":
+                 System.out.println("Esta escuchando");
+                 if(audio.estaReproduciendo()){
+                     audio.detener();
+                 
+                 }else{
+                     audio.iniciarMusica("/audios/audio1.wav");
+                 }
+             break;    
+         }
+                
     }
-    }
+    
 }

@@ -11,7 +11,7 @@ import com.mycompany.parchisb59226.controlador.ControladorPrincipal;
  * @author Joselyn Ledezma V
  */
 public class GUICreditos extends javax.swing.JFrame {
-    
+
     /**
      * Creates new form GUICreditos
      */
@@ -19,8 +19,9 @@ public class GUICreditos extends javax.swing.JFrame {
         initComponents();
         escuchar(controlador);
     }
+    
     public void escuchar(ControladorPrincipal controlador){
-    btnAtras.addActionListener(controlador);
+        btnAtras.addActionListener(controlador);
     }
 
     /**

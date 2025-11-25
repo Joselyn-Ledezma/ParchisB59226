@@ -13,6 +13,8 @@ import javax.swing.JOptionPane;
  */
 public class GUIJuego extends javax.swing.JFrame {
     
+   
+
     /**
      * Creates new form GUIJuego
      */
@@ -29,12 +31,13 @@ public class GUIJuego extends javax.swing.JFrame {
     public PanelJuego getPanelJuego() {
         return panelJuego;
     }
-    //metodos enlace para escucha y respuesta de las preguntas
+    
     public void showMessage(String mensaje){
-    JOptionPane.showMessageDialog(null, mensaje);
+      JOptionPane.showMessageDialog(null, mensaje);
     }
+    
     public int inputRespuesta(String mensaje){
-    return JOptionPane.showConfirmDialog(null, mensaje);
+      return JOptionPane.showConfirmDialog(null, mensaje);
     }
 
     

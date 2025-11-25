@@ -8,33 +8,32 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Joselyn Ledezma V
+ * @author user
  */
 public class BancoPregunta {
-    private ArrayList<Pregunta>  listaPreguntas;
+    private ArrayList<Pregunta> listaPreguntas;
 
     public BancoPregunta() {
-        listaPreguntas=new ArrayList<Pregunta>();
+        listaPreguntas= new ArrayList<Pregunta>();
     }
+    
     public void crearPreguntas(){
-agregar(new Pregunta("¿Bruselas es  la capital de bélgica?",0));//Verdad 0- false 1
-agregar(new Pregunta("¿Carlos se va a quedar en ITM",0));
-agregar(new Pregunta("¿El tomate es una fruta",0));
-agregar(new Pregunta("¿Maria siempre llega temprano",1));
-agregar(new Pregunta("¿Es posible acceder a un atributos con visibilidad privada directamente desde otra clase",1));
-agregar(new Pregunta("¿Carlos se va a quedar en ITM",0));
+       agregar(new Pregunta("Bruselas es la capital de Belgica?",0));
+       agregar(new Pregunta("¿Carlos se va a quedar en ITM?",0));
+       agregar(new Pregunta("¿El tomate es una fruta?",0));
+       agregar(new Pregunta("¿María siempre llega temprano?",1));
+        
     }
-   
+    
     public void agregar (Pregunta pregunta){
         listaPreguntas.add(pregunta);
     }
     
     public Pregunta getPregunta(int posicion){
-    return listaPreguntas.get(posicion);
+        return listaPreguntas.get(posicion);
     }
     
     public int getElementos(){
-    return listaPreguntas.size();
-    }
-    
-}//Fin clase
+        return listaPreguntas.size();
+     }  
+}//fin de la clase

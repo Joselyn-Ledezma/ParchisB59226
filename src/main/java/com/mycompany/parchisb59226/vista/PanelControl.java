@@ -5,6 +5,7 @@
 package com.mycompany.parchisb59226.vista;
 
 import com.mycompany.parchisb59226.controlador.ControladorJuego;
+import javax.swing.JLabel;
 
 /**
  *
@@ -18,12 +19,20 @@ public class PanelControl extends javax.swing.JPanel {
     public PanelControl() {
         initComponents();
     }
-    
-    public void escuchar (ControladorJuego controlador){
-    btnAtras.addActionListener(controlador);
-    btnDado.addActionListener(controlador);
-    
+    public void escuchar(ControladorJuego controlador){
+        btnAtras.addActionListener(controlador);
+        btnDado.addActionListener(controlador);
     }
+
+    public void setJlNombreJugador1(String jlNombreJugador1) {
+        this.jlNombreJugador1.setText(jlNombreJugador1);
+    }
+
+    public void setJlNombreJugador2(String jlNombreJugador2) {
+        this.jlNombreJugador2.setText(jlNombreJugador2);
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,6 +45,8 @@ public class PanelControl extends javax.swing.JPanel {
 
         btnDado = new javax.swing.JButton();
         btnAtras = new javax.swing.JButton();
+        jlNombreJugador1 = new javax.swing.JLabel();
+        jlNombreJugador2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -49,8 +60,14 @@ public class PanelControl extends javax.swing.JPanel {
         btnAtras.setContentAreaFilled(false);
         add(btnAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 640, -1, -1));
 
+        jlNombreJugador1.setText("Jugador 1");
+        add(jlNombreJugador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 300, -1, -1));
+
+        jlNombreJugador2.setText("Jugador 2 ");
+        add(jlNombreJugador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 380, -1, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/TableroFondo_1.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 700));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1030, 700));
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -58,5 +75,7 @@ public class PanelControl extends javax.swing.JPanel {
     private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnDado;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jlNombreJugador1;
+    private javax.swing.JLabel jlNombreJugador2;
     // End of variables declaration//GEN-END:variables
 }

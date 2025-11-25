@@ -20,17 +20,18 @@ public class Celda {
         return posicion;
     }
 
-    public Ficha getFicha() {
-        return ficha;
-    }
-
     public void setPosicion(Posicion posicion) {
         this.posicion = posicion;
+    }
+
+    public Ficha getFicha() {
+        return ficha;
     }
 
     public void setFicha(Ficha ficha) {
         this.ficha = ficha;
     }
+    
     
     
 }

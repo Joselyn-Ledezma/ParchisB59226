@@ -10,10 +10,10 @@ import com.mycompany.parchisb59226.controlador.ControladorPrincipal;
  *
  * @author Joselyn Ledezma V
  */
-public class GUIPrincipal extends javax.swing.JFrame {
-    
-    
 
+    public class GUIPrincipal extends javax.swing.JFrame {
+    
+   
     /**
      * Creates new form GUIPrincipal
      */
@@ -21,13 +21,16 @@ public class GUIPrincipal extends javax.swing.JFrame {
         initComponents();
         escuchar(controlador);
     }
-public void escuchar(ControladorPrincipal controlador){
-btnJugar.addActionListener(controlador);
-btnCreditos.addActionListener(controlador);
-btnHistoria.addActionListener(controlador);
-btnInstrucciones.addActionListener(controlador);
-btnSalir.addActionListener(controlador);
-}
+    
+    public void escuchar(ControladorPrincipal controlador){
+        btnJugar.addActionListener(controlador);
+        btnInstrucciones.addActionListener(controlador);
+        btnHistoria.addActionListener(controlador);
+        btnCreditos.addActionListener(controlador);
+        btnSalir.addActionListener(controlador);
+        btnSonido.addActionListener(controlador);
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -42,6 +45,7 @@ btnSalir.addActionListener(controlador);
         btnCreditos = new javax.swing.JButton();
         btnHistoria = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
+        btnSonido = new javax.swing.JButton();
         jlFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -83,6 +87,10 @@ btnSalir.addActionListener(controlador);
         btnSalir.setContentAreaFilled(false);
         getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 570, -1, -1));
 
+        btnSonido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Sonido_1.png"))); // NOI18N
+        btnSonido.setActionCommand("btnSonido");
+        getContentPane().add(btnSonido, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 570, -1, -1));
+
         jlFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoPrincipal.png"))); // NOI18N
         getContentPane().add(jlFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 660));
 
@@ -104,6 +112,8 @@ btnSalir.addActionListener(controlador);
     private javax.swing.JButton btnInstrucciones;
     private javax.swing.JButton btnJugar;
     private javax.swing.JButton btnSalir;
+    private javax.swing.JButton btnSonido;
     private javax.swing.JLabel jlFondo;
     // End of variables declaration//GEN-END:variables
 }
+

@@ -23,14 +23,15 @@ public class Pregunta {
     public String getEnunciado() {
         return enunciado;
     }
-    
-      public void setEnunciado(String enunciado) {
+
+    public void setEnunciado(String enunciado) {
         this.enunciado = enunciado;
     }
 
-    public int getRespuesta() {
+    public int isRespuesta() {
         return respuesta;
     }
+
     public void setRespuesta(int respuesta) {
         this.respuesta = respuesta;
     }

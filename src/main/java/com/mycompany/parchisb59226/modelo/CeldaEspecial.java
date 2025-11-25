@@ -8,12 +8,12 @@ package com.mycompany.parchisb59226.modelo;
  *
  * @author Joselyn Ledezma V
  */
-public class CeldaEspecial extends Celda{
+public class CeldaEspecial extends Celda {
     protected String tipo;
     
-    public CeldaEspecial(Posicion posicion, String tipo){
-    super(posicion);
-    this.tipo=tipo;
+    public CeldaEspecial(Posicion posicion, String tipo) {
+        super(posicion);
+        this.tipo= tipo;
     }
 
     public String getTipo() {
@@ -23,6 +23,6 @@ public class CeldaEspecial extends Celda{
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-   
+    
     
 }

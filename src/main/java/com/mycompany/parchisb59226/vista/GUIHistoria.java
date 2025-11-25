@@ -13,18 +13,18 @@ import com.mycompany.parchisb59226.controlador.ControladorPrincipal;
 public class GUIHistoria extends javax.swing.JFrame {
     
    
+
     /**
      * Creates new form GUIHistoria
-     * @param controlador
      */
     public GUIHistoria(ControladorPrincipal controlador) {
         initComponents();
         escuchar(controlador);
     }
+    
      public void escuchar(ControladorPrincipal controlador){
-    btnAtrasHistoria.addActionListener(controlador);
+        btnAtrasHistoria.addActionListener(controlador);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

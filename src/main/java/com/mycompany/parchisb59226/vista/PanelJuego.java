@@ -12,32 +12,31 @@ import javax.swing.ImageIcon;
  *
  * @author Joselyn Ledezma V
  */
-public class PanelJuego extends javax.swing.JPanel {
-private ImageIcon tableroGrafico;
-private ImageIcon ficha;
-private ControladorJuego controlador;
+   public class PanelJuego extends javax.swing.JPanel {
+    private ImageIcon tableroGrafico;
+    private ImageIcon ficha;
+    private ControladorJuego controlador;
+
     /**
      * Creates new form PanelJuego
      */
     public PanelJuego() {
         initComponents();
-        tableroGrafico=new ImageIcon("./src/main/resources/imagenes/tablerografico2.png");
-        ficha= new ImageIcon("./src/main/resources/imagenes/pieceyellow.png");
-    }
-    
-    public void escuchar (ControladorJuego controlador){
-    this.controlador=controlador;
-    addMouseListener(controlador);
+        tableroGrafico=new ImageIcon("./src/main/resources/img/tablerografico2.png");
+        ficha=new  ImageIcon("./src/main/resources/img/pieceblue.png");
     }
     
     public void paintComponent(Graphics g){
-    super.paintComponent(g);//Invoca al padre
-    tableroGrafico.paintIcon(this, g, 0, 0);
-   if (controlador!=null){
-   controlador.dibujar(this, g);
-   
-   }
+        super.paintComponent(g);
+        tableroGrafico.paintIcon(this, g, 0, 0);
+        if(controlador != null){
+        controlador.dibujar(this, g);
+        }
+    }
     
+    public void escuchar(ControladorJuego controlador){
+        this.controlador=controlador;
+        addMouseListener(controlador);
     }
 
     /**

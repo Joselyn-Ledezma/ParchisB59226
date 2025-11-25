@@ -14,8 +14,6 @@ import javax.swing.JTextField;
  * @author Joselyn Ledezma V
  */
 public class GUIJugador extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GUIJugador.class.getName());
 
     /**
      * Creates new form GUIJugador
@@ -26,7 +24,7 @@ public class GUIJugador extends javax.swing.JFrame {
     }
 
     public String getCbColor() {
-        return (String) cbColor.getSelectedItem().toString();
+        return (String) cbColor.getSelectedItem();
     }
 
     public String getTxtJugador1() {
